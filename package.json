@@ -1,0 +1,35 @@
+{
+  "name": "orchesty-bootstrap-worker",
+  "description": "",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --detectOpenHandles --passWithNoTests",
+    "lint": "eslint src --fix",
+    "start": "nodemon src/index.ts",
+    "mock-server": "ts-node scripts/mock-server/index.ts",
+    "build": "rm -rf dist && tsc -p tsconfig.prod.json && copyfiles -u 1 src/**/*.html dist/src/"
+  },
+  "keywords": [],
+  "author": "info@hanaboso.com",
+  "dependencies": {
+    "@orchesty/nodejs-sdk": "^5.0.10"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^10.0.1",
+    "@hanaboso/eslint-plugin": "^1.2.5",
+    "@orchesty/nodejs-ai": "^1.0.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.6.2",
+    "axios-mock-adapter": "^2.1.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^10.3.0",
+    "jest": "^30.4.2",
+    "nodemon": "^3.1.14",
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
