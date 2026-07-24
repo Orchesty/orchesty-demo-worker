@@ -1,0 +1,18 @@
+services:
+    worker:
+        image: worker:worker-tag
+        build: ./docker
+        user: ${DEV_UID}:${DEV_GID}
+        working_dir: /var/www
+        volumes:
+            - ./:/var/www:cached
+        environment:
+            # Envs for tests are load from .jest/testEnvs.ts
+            JEST_DOCKER: 1
+            APP_ENV: 'debug'
+            TUNNEL_ENABLED: ${TUNNEL_ENABLED}
+            TUNNEL_WORKER_ID: ${TUNNEL_WORKER_ID}
+            TENANT_ID: ${TENANT_ID:-docker}
+            CRYPT_SECRET: ${CRYPT_SECRET}
+            ORCHESTY_API_KEY: ${ORCHESTY_API_KEY}
+        command: sleep infinity
