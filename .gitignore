@@ -1,0 +1,26 @@
+# IDEs
+.idea
+.vscode
+*.DS_Store
+
+# CURSOR
+# Rules are materialized from @orchesty/nodejs-ai per AGENTS.md, not tracked here
+.cursor
+
+# NODE
+dist
+coverage
+node_modules
+.pnpm-store
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ORCHESTY
+# Keep .env.dist tracked as a template, ignore real/local env files
+.env
+.env.local
+.env.*.local
+*.pem

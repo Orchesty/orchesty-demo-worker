@@ -1,0 +1,54 @@
+{
+    "nodes": [
+        {
+            "type": "flow",
+            "id": "add-timestamp",
+            "label": "Custom Action",
+            "shape": "square",
+            "property": null,
+            "action": {
+                "name": "add-timestamp",
+                "worker": "demo",
+                "type": "custom",
+                "app": null
+            },
+            "name": null,
+            "position": {
+                "x": 155,
+                "y": -5
+            }
+        },
+        {
+            "type": "flow",
+            "id": "b8e79f07249281a9",
+            "label": "Webhook",
+            "shape": "circle",
+            "property": null,
+            "action": {
+                "name": "webhook-test.order.created",
+                "worker": "demo",
+                "type": "webhook",
+                "app": "webhook-test",
+                "event": "order.created",
+                "description": "Webhook Test · order.created",
+                "parameters": {
+                    "source": "webhook-test"
+                }
+            },
+            "name": "webhook-test.order.created",
+            "position": {
+                "x": -105,
+                "y": -5
+            }
+        }
+    ],
+    "connections": [
+        {
+            "id": "71ca5f61ea192843",
+            "from": "b8e79f07249281a9",
+            "to": "add-timestamp",
+            "sourceOutput": "output",
+            "targetInput": "input"
+        }
+    ]
+}

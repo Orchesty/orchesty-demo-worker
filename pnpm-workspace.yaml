@@ -1,0 +1,9 @@
+overrides:
+  eslint: ^10.8.0
+  '@orchesty/nodejs-sdk': ^5.0.13
+
+allowBuilds:
+  protobufjs: true
+  unrs-resolver: true
+
+confirmModulesPurge: false
