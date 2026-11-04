@@ -1,0 +1,19 @@
+{
+    "data": {
+        "client": "Acme s.r.o.",
+        "subject": "vstupní analýza",
+        "hourlyRate": 1500,
+        "effortMd": 3,
+        "description": "Inventura toků.",
+        "currency": "CZK",
+        "email": "a@acme.test",
+        "customer": {
+            "source": "ares",
+            "name": "Acme s.r.o.",
+            "ico": "12345678",
+            "address": "Dlouhá 1, Praha"
+        },
+        "folder": { "id": "folder-acme", "name": "Acme" }
+    },
+    "headers": { "user": "user", "sdk": "sdk" }
+}

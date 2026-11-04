@@ -1,0 +1,18 @@
+{
+    "http": "POST https://api.openai.com/v1/responses",
+    "code": 200,
+    "body": {
+        "output": [
+            {
+                "type": "message",
+                "content": [
+                    {
+                        "type": "output_text",
+                        "text": "{\"nazevObjednavky\":\"Vstupní analýza – Acme s.r.o.\",\"technickaSpecifikace\":\"Upravený popis inventury toků.\"}"
+                    }
+                ]
+            }
+        ]
+    },
+    "headers": { "Content-Type": "application/json" }
+}

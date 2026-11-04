@@ -1,0 +1,11 @@
+{
+    "http": "GET https://www\\.googleapis\\.com/drive/v3/files",
+    "useRegexp": true,
+    "code": 200,
+    "body": {
+        "files": [
+            { "id": "folder-acme", "name": "Acme" }
+        ]
+    },
+    "headers": { "Content-Type": "application/json" }
+}

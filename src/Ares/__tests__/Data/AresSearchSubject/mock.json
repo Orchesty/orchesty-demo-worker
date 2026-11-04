@@ -1,0 +1,15 @@
+{
+    "http": "POST https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/vyhledat",
+    "code": 200,
+    "body": {
+        "pocetCelkem": 1,
+        "ekonomickeSubjekty": [
+            {
+                "ico": "12345678",
+                "obchodniJmeno": "Acme s.r.o.",
+                "sidlo": { "textovaAdresa": "Dlouhá 1, Praha" }
+            }
+        ]
+    },
+    "headers": { "Content-Type": "application/json" }
+}

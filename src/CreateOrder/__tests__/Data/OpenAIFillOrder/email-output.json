@@ -1,0 +1,45 @@
+{
+    "data": {
+        "client": "Acme s.r.o.",
+        "subject": "vstupní analýza",
+        "hourlyRate": 1500,
+        "effortMd": 3,
+        "description": "Inventura toků.",
+        "currency": "CZK",
+        "email": "a@acme.test",
+        "customer": {
+            "source": "ares",
+            "name": "Acme s.r.o.",
+            "ico": "12345678",
+            "address": "Dlouhá 1, Praha"
+        },
+        "folder": { "id": "folder-acme", "name": "Acme" },
+        "documentName": "IGNORED",
+        "replacements": {
+            "{{NAZEV_ZAKAZNIKA}}": "Acme s.r.o.",
+            "{{SIDLO_ZAKAZNIKA}}": "Dlouhá 1, Praha",
+            "{{ICO_ZAKAZNIKA}}": "12345678",
+            "{{EMAIL_ZAKAZNIKA}}": "a@acme.test",
+            "{{NAZEV_OBJEDNAVKY}}": "Vstupní analýza – Acme s.r.o.",
+            "{{PREDMET_OBJEDNAVKY}}": "vstupní analýza",
+            "{{TECHNICKA_SPECIFIKACE}}": "Upravený popis inventury toků.",
+            "{{ROZSAH_PLNENI}}": "3 MD (24 h)",
+            "{{CENA_PLNENI}}": "1 500 / hod, odhad 3 MD",
+            "{{MENA}}": "Kč"
+        },
+        "unfilled": [
+            "{{SOUCINNOST_ZAKAZNIKA_A_PODMINKY}}",
+            "{{TERMIN_DODANI}}",
+            "{{PLATEBNI_HARMONOGRAM}}",
+            "{{DOPLNUJICI_PLATEBNI_UJEDNANI}}",
+            "{{DATUM_PODPISU_ZAKAZNIK}}",
+            "{{PODPIS_ZAKAZNIK}}",
+            "{{DATUM_PODPISU_POSKYTOVATEL}}",
+            "{{PODPIS_POSKYTOVATEL}}"
+        ]
+    },
+    "replacement": {
+        "data": { "documentName": "IGNORED" }
+    },
+    "headers": { "user": "user", "sdk": "sdk" }
+}

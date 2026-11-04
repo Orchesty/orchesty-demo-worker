@@ -1,0 +1,11 @@
+{
+    "http": "POST https://www\\.googleapis\\.com/drive/v3/files/template-1/copy",
+    "useRegexp": true,
+    "code": 200,
+    "body": {
+        "id": "doc-1",
+        "name": "Objednávka – Acme s.r.o. – vstupní analýza – 2026-10-21",
+        "webViewLink": "https://docs.google.com/document/d/doc-1/edit"
+    },
+    "headers": { "Content-Type": "application/json" }
+}

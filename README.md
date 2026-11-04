@@ -39,7 +39,8 @@ That's the entire setup. The AI rule files in `node_modules/@orchesty/nodejs-ai/
 ```
 .
 ├── src/
-│   └── index.ts            # Worker entry point: register Applications and Nodes here
+│   ├── index.ts            # Worker entry point: register Applications and Nodes here
+│   └── topologies/         # Demo topologies, including SendGrid via the Activepieces adapter
 ├── .jest/                  # Jest setup helpers
 ├── docker/                 # Dev container support files
 ├── docker-compose.yaml     # Dev container definition (used by `make init-dev-docker`)
@@ -86,12 +87,21 @@ Rules ship as the npm package [`@orchesty/nodejs-ai`](https://github.com/Orchest
 
 To pull rule updates: `pnpm update @orchesty/nodejs-ai`, then ask your AI tool to re-run the AGENTS.md setup workflow (or copy the refreshed `.mdc` files yourself if you prefer).
 
+## Activepieces adapter
+
+The worker registers [Activepieces pieces](https://www.activepieces.com/pieces) through
+[`@orchesty/activepieces-adapter`](../orchesty-activepieces-adapter). SendGrid is the
+playground example: a BASIC `sendgrid` application (API key) and one connector per
+action (`sendgrid-send-email`, …). Topology:
+[`src/topologies/demo-sendgrid-send-email.tplg.json`](src/topologies/demo-sendgrid-send-email.tplg.json).
+
 ## Documentation
 
 - [Orchesty platform docs](https://docs.orchesty.io/)
 - [`@orchesty/nodejs-sdk` on npm](https://www.npmjs.com/package/@orchesty/nodejs-sdk)
 - [Pre-built `@orchesty/connector-*` packages](https://www.npmjs.com/search?q=%40orchesty%2Fconnector)
 - [Connector source examples](https://github.com/Orchesty/orchesty-nodejs-connectors/tree/master/lib)
+- [`@orchesty/activepieces-adapter`](../orchesty-activepieces-adapter)
 
 ## Community
 

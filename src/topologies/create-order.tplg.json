@@ -1,0 +1,221 @@
+{
+    "nodes": [
+        {
+            "type": "flow",
+            "id": "start-create-order",
+            "label": "Event",
+            "shape": "circle",
+            "property": null,
+            "action": null,
+            "name": "start",
+            "position": {
+                "x": -220,
+                "y": 0
+            }
+        },
+        {
+            "type": "flow",
+            "id": "ares-search-subject",
+            "label": "Connector",
+            "shape": "square",
+            "property": null,
+            "action": {
+                "name": "ares-search-subject",
+                "worker": "demo",
+                "type": "connector",
+                "app": "ares",
+                "icon": "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iIzBiM2Q5MSIvPjx0ZXh0IHg9IjMyIiB5PSIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZpbGw9IiNmZmYiPkFSRVM8L3RleHQ+PC9zdmc+\" alt=\"\" />"
+            },
+            "name": null,
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        {
+            "type": "flow",
+            "id": "pick-ares-customer",
+            "label": "Custom Action",
+            "shape": "square",
+            "property": null,
+            "action": {
+                "name": "pick-ares-customer",
+                "worker": "demo",
+                "type": "custom",
+                "app": "ares",
+                "icon": "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iIzBiM2Q5MSIvPjx0ZXh0IHg9IjMyIiB5PSIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZpbGw9IiNmZmYiPkFSRVM8L3RleHQ+PC9zdmc+\" alt=\"\" />"
+            },
+            "name": null,
+            "position": {
+                "x": 220,
+                "y": 0
+            }
+        },
+        {
+            "type": "flow",
+            "id": "google-drive-list-client-folders",
+            "label": "Connector",
+            "shape": "square",
+            "property": null,
+            "action": {
+                "name": "google-drive-list-client-folders",
+                "worker": "demo",
+                "type": "connector",
+                "app": "google-workspace",
+                "icon": "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iIzFhNzNlOCIvPjx0ZXh0IHg9IjMyIiB5PSIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZpbGw9IiNmZmYiPkRvY3M8L3RleHQ+PC9zdmc+\" alt=\"\" />"
+            },
+            "name": null,
+            "position": {
+                "x": 440,
+                "y": 0
+            }
+        },
+        {
+            "type": "flow",
+            "id": "match-client-folder",
+            "label": "Custom Action",
+            "shape": "square",
+            "property": null,
+            "action": {
+                "name": "match-client-folder",
+                "worker": "demo",
+                "type": "custom",
+                "app": "google-workspace",
+                "icon": "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iIzFhNzNlOCIvPjx0ZXh0IHg9IjMyIiB5PSIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZpbGw9IiNmZmYiPkRvY3M8L3RleHQ+PC9zdmc+\" alt=\"\" />"
+            },
+            "name": null,
+            "position": {
+                "x": 660,
+                "y": 0
+            }
+        },
+        {
+            "type": "flow",
+            "id": "open-ai-fill-order",
+            "label": "Connector",
+            "shape": "square",
+            "property": null,
+            "action": {
+                "name": "open-ai-fill-order",
+                "worker": "demo",
+                "type": "connector",
+                "app": "open-ai",
+                "icon": "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSJub25lIj4KICA8c3R5bGU+CiAgICA6cm9vdCB7CiAgICAgIC0tcHJpbWFyeS1maWxsOiAjZmZmOwogICAgICAtLXNlY29uZGFyeS1maWxsOiAjMDAwOwogICAgfQogICAgQG1lZGlhIChwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaykgewogICAgICA6cm9vdCB7CiAgICAgICAgLS1wcmltYXJ5LWZpbGw6ICMwMDA7CiAgICAgICAgLS1zZWNvbmRhcnktZmlsbDogI2ZmZjsKICAgICAgfQogICAgfQogIDwvc3R5bGU+CiAgPGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj4KICAgIDxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSJ2YXIoLS1wcmltYXJ5LWZpbGwpIiByeD0iOTAiIC8+CiAgICA8ZyBjbGlwLXBhdGg9InVybCgjYikiPgogICAgICA8cGF0aAogICAgICAgIGZpbGw9InZhcigtLXNlY29uZGFyeS1maWxsKSIKICAgICAgICBkPSJNNzUuOTEgNzMuNjI4VjYyLjIzMmMwLS45Ni4zNi0xLjY4IDEuMTk5LTIuMTZsMjIuOTEyLTEzLjE5NGMzLjExOS0xLjggNi44MzgtMi42MzkgMTAuNjc2LTIuNjM5IDE0LjM5NCAwIDIzLjUxMSAxMS4xNTcgMjMuNTExIDIzLjAzMiAwIC44MzkgMCAxLjc5OS0uMTIgMi43NThsLTIzLjc1Mi0xMy45MTRjLTEuNDM5LS44NC0yLjg3OS0uODQtNC4zMTggMEw3NS45MSA3My42MjdabTUzLjQ5OSA0NC4zODN2LTI3LjIzYzAtMS42OC0uNzItMi44OC0yLjE1OS0zLjcxOUw5Ny4xNDIgNjkuNTVsOS44MzYtNS42MzhjLjgzOS0uNDggMS41NTktLjQ4IDIuMzk5IDBsMjIuOTEyIDEzLjE5NWM2LjU5OCAzLjgzOSAxMS4wMzUgMTEuOTk1IDExLjAzNSAxOS45MTIgMCA5LjExNi01LjM5NyAxNy41MTMtMTMuOTE1IDIwLjk5MnYuMDAxWm0tNjAuNTc3LTIzLjk5LTkuODM2LTUuNzU4Yy0uODQtLjQ4LTEuMi0xLjItMS4yLTIuMTZ2LTI2LjM5YzAtMTIuODM0IDkuODM3LTIyLjU1IDIzLjE1Mi0yMi41NSA1LjAzOSAwIDkuNzE2IDEuNjc5IDEzLjY3NiA0LjY3OEw3MC45OTMgNTUuNTE2Yy0xLjQ0Ljg0LTIuMTYgMi4wMzktMi4xNiAzLjcxOXYzNC43ODctLjAwMlptMjEuMTczIDEyLjIzNEw3NS45MSA5OC4zMzlWODEuNTQ2bDE0LjA5NS03LjkxNyAxNC4wOTQgNy45MTd2MTYuNzkzbC0xNC4wOTQgNy45MTZabTkuMDU2IDM2LjQ2N2MtNS4wMzggMC05LjcxNi0xLjY4LTEzLjY3NS00LjY3OGwyMy42MzEtMTMuNjc2YzEuNDM5LS44MzkgMi4xNTktMi4wMzggMi4xNTktMy43MThWODUuODYzbDkuOTU2IDUuNzU3Yy44NC40OCAxLjIgMS4yIDEuMiAyLjE2djI2LjM4OWMwIDEyLjgzNS05Ljk1NyAyMi41NTItMjMuMjcgMjIuNTUydi4wMDFabS0yOC40My0yNi43NUw0Ny43MiAxMDIuNzc4Yy02LjU5OS0zLjg0LTExLjAzNi0xMS45OTYtMTEuMDM2LTE5LjkxMyAwLTkuMjM2IDUuNTE4LTE3LjUxMyAxNC4wMzQtMjAuOTkydjI3LjM1YzAgMS42OC43MiAyLjg3OSAyLjE2IDMuNzE4bDI5Ljk4OSAxNy4zOTMtOS44MzcgNS42MzhjLS44NC40OC0xLjU2LjQ4LTIuMzk5IDBabS0xLjMxOCAxOS42NzNjLTEzLjU1NSAwLTIzLjUxMi0xMC4xOTYtMjMuNTEyLTIyLjc5MiAwLS45NTkuMTItMS45MTkuMjQtMi44NzlsMjMuNjMgMTMuNjc1YzEuNDQuODQgMi44OC44NCA0LjMyIDBsMzAuMTA4LTE3LjM5MnYxMS4zOTVjMCAuOTYtLjM2MSAxLjY4LTEuMiAyLjE2bC0yMi45MTIgMTMuMTk0Yy0zLjExOSAxLjgtNi44MzcgMi42MzktMTAuNjc1IDIuNjM5Wm0yOS43NDggMTQuMjc0YzE0LjUxNSAwIDI2LjYzLTEwLjMxNiAyOS4zOS0yMy45OTEgMTMuNDM0LTMuNDc5IDIyLjA3MS0xNi4wNzQgMjIuMDcxLTI4LjkxIDAtOC4zOTYtMy41OTgtMTYuNTUzLTEwLjA3Ni0yMi40My42LTIuNTIuOTYtNS4wMzkuOTYtNy41NTcgMC0xNy4xNTMtMTMuOTE1LTI5Ljk5LTI5Ljk4OS0yOS45OS0zLjIzOSAwLTYuMzU4LjQ4LTkuNDc3IDEuNTYtNS4zOTgtNS4yNzgtMTIuODM1LTguNjM3LTIwLjk5Mi04LjYzNy0xNC41MTUgMC0yNi42MyAxMC4zMTYtMjkuMzkgMjMuOTkxLTEzLjQzNCAzLjQ4LTIyLjA3IDE2LjA3NC0yMi4wNyAyOC45MSAwIDguMzk2IDMuNTk4IDE2LjU1MyAxMC4wNzUgMjIuNDMxLS42IDIuNTE5LS45NiA1LjAzOC0uOTYgNy41NTYgMCAxNy4xNTQgMTMuOTE1IDI5Ljk4OSAyOS45OSAyOS45ODkgMy4yMzggMCA2LjM1Ny0uNDc5IDkuNDc2LTEuNTU5IDUuMzk3IDUuMjc4IDEyLjgzNSA4LjYzNyAyMC45OTIgOC42MzdaIgogICAgICAvPgogICAgPC9nPgogIDwvZz4KICA8ZGVmcz4KICAgIDxjbGlwUGF0aCBpZD0iYSI+CiAgICAgIDxwYXRoIGQ9Ik0wIDBoMTgwdjE4MEgweiIgLz4KICAgIDwvY2xpcFBhdGg+CiAgICA8Y2xpcFBhdGggaWQ9ImIiPgogICAgICA8cGF0aCBkPSJNMjkuNDg3IDI5Ljk2NGgxMjEuMDM1djExOS45NTRIMjkuNDg3eiIgLz4KICAgIDwvY2xpcFBhdGg+CiAgPC9kZWZzPgo8L3N2Zz4K\" alt=\"\" />"
+            },
+            "name": null,
+            "position": {
+                "x": 880,
+                "y": 0
+            }
+        },
+        {
+            "type": "flow",
+            "id": "google-drive-copy-template",
+            "label": "Connector",
+            "shape": "square",
+            "property": null,
+            "action": {
+                "name": "google-drive-copy-template",
+                "worker": "demo",
+                "type": "connector",
+                "app": "google-workspace",
+                "icon": "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iIzFhNzNlOCIvPjx0ZXh0IHg9IjMyIiB5PSIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZpbGw9IiNmZmYiPkRvY3M8L3RleHQ+PC9zdmc+\" alt=\"\" />"
+            },
+            "name": null,
+            "position": {
+                "x": 1100,
+                "y": 0
+            }
+        },
+        {
+            "type": "flow",
+            "id": "google-docs-replace-placeholders",
+            "label": "Connector",
+            "shape": "square",
+            "property": null,
+            "action": {
+                "name": "google-docs-replace-placeholders",
+                "worker": "demo",
+                "type": "connector",
+                "app": "google-workspace",
+                "icon": "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iIzFhNzNlOCIvPjx0ZXh0IHg9IjMyIiB5PSIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZpbGw9IiNmZmYiPkRvY3M8L3RleHQ+PC9zdmc+\" alt=\"\" />"
+            },
+            "name": null,
+            "position": {
+                "x": 1320,
+                "y": 0
+            }
+        },
+        {
+            "type": "flow",
+            "id": "create-order-response",
+            "label": "Response",
+            "shape": "terminal",
+            "property": null,
+            "action": null,
+            "name": null,
+            "position": {
+                "x": 1540,
+                "y": 0
+            }
+        }
+    ],
+    "connections": [
+        {
+            "id": "c1",
+            "from": "start-create-order",
+            "to": "ares-search-subject",
+            "sourceOutput": "output",
+            "targetInput": "input"
+        },
+        {
+            "id": "c2",
+            "from": "ares-search-subject",
+            "to": "pick-ares-customer",
+            "sourceOutput": "output",
+            "targetInput": "input"
+        },
+        {
+            "id": "c3",
+            "from": "pick-ares-customer",
+            "to": "google-drive-list-client-folders",
+            "sourceOutput": "output",
+            "targetInput": "input"
+        },
+        {
+            "id": "c4",
+            "from": "google-drive-list-client-folders",
+            "to": "match-client-folder",
+            "sourceOutput": "output",
+            "targetInput": "input"
+        },
+        {
+            "id": "c5",
+            "from": "match-client-folder",
+            "to": "open-ai-fill-order",
+            "sourceOutput": "output",
+            "targetInput": "input"
+        },
+        {
+            "id": "c6",
+            "from": "open-ai-fill-order",
+            "to": "google-drive-copy-template",
+            "sourceOutput": "output",
+            "targetInput": "input"
+        },
+        {
+            "id": "c7",
+            "from": "google-drive-copy-template",
+            "to": "google-docs-replace-placeholders",
+            "sourceOutput": "output",
+            "targetInput": "input"
+        },
+        {
+            "id": "c8",
+            "from": "google-docs-replace-placeholders",
+            "to": "create-order-response",
+            "sourceOutput": "output",
+            "targetInput": "input"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "data": {
+        "client": "Acme s.r.o.",
+        "subject": "vstupní analýza",
+        "hourlyRate": 1500,
+        "effortMd": 3,
+        "description": "Inventura toků.",
+        "ares": { "ekonomickeSubjekty": [] }
+    },
+    "headers": {
+        "user": "user",
+        "sdk": "sdk",
+        "result-code": "1006",
+        "result-message": "V ARES nebyl nalezen zákazník „Acme s.r.o.“."
+    }
+}

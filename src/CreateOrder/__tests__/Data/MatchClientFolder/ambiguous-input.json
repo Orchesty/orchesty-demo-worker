@@ -1,0 +1,20 @@
+{
+    "data": {
+        "client": "Orchesty",
+        "subject": "vstupní analýza",
+        "hourlyRate": 1500,
+        "effortMd": 3,
+        "description": "Inventura toků.",
+        "customer": {
+            "source": "ares",
+            "name": "Orchesty",
+            "ico": "02063450",
+            "address": "Brno"
+        },
+        "folders": [
+            { "id": "folder-a", "name": "Orchesty A" },
+            { "id": "folder-b", "name": "Orchesty B" }
+        ]
+    },
+    "headers": { "user": "user", "sdk": "sdk" }
+}

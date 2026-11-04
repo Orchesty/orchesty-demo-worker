@@ -1,0 +1,22 @@
+{
+    "data": {
+        "client": "Acme s.r.o.",
+        "subject": "vstupní analýza",
+        "hourlyRate": 1500,
+        "effortMd": 3,
+        "description": "Inventura toků.",
+        "customer": {
+            "source": "ares",
+            "name": "Acme s.r.o.",
+            "ico": "12345678",
+            "address": "Dlouhá 1, Praha"
+        },
+        "folder": { "id": "folder-acme", "name": "Acme" },
+        "documentName": "Objednávka – Acme s.r.o. – vstupní analýza – 2026-10-21",
+        "documentId": "doc-1",
+        "documentUrl": "https://docs.google.com/document/d/doc-1/edit",
+        "replacements": { "{{NAZEV_ZAKAZNIKA}}": "Acme s.r.o." },
+        "unfilled": ["{{EMAIL_ZAKAZNIKA}}", "{{TERMIN_DODANI}}"]
+    },
+    "headers": { "user": "user", "sdk": "sdk" }
+}

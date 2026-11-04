@@ -1,0 +1,23 @@
+{
+    "data": {
+        "client": "02063450",
+        "subject": "vstupní analýza",
+        "hourlyRate": 1500,
+        "effortMd": 3,
+        "description": "Inventura toků.",
+        "currency": "CZK",
+        "ares": {
+            "ekonomickeSubjekty": [
+                {
+                    "ico": "02063450",
+                    "obchodniJmeno": "Orchesty Solutions s.r.o.",
+                    "sidlo": { "textovaAdresa": "Chládkova 898/2, Žabovřesky, 61600 Brno" }
+                }
+            ]
+        }
+    },
+    "headers": {
+        "user": "user",
+        "sdk": "sdk"
+    }
+}

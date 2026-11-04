@@ -1,5 +1,8 @@
+import { sendgrid } from '@activepieces/piece-sendgrid';
+import { registerPiece } from '@orchesty/activepieces-adapter';
 import { container, initiateContainer, listen } from '@orchesty/nodejs-sdk';
 import AddTimestampNode from './AddTimestamp/AddTimestampNode';
+import { registerCreateOrder } from './CreateOrder/registerCreateOrder';
 import MessageBuilder from './FormsDemo/CustomNode/MessageBuilder';
 import MessageFormatter from './FormsDemo/CustomNode/MessageFormatter';
 import FormsDemoApplication from './FormsDemo/FormsDemoApplication';
@@ -8,13 +11,23 @@ import ProductsTestListProductsBatch from './ProductsTest/Connector/ProductsTest
 import ProductsTestExtractId from './ProductsTest/CustomNode/ProductsTestExtractId';
 import ProductsTestProductMapper from './ProductsTest/CustomNode/ProductsTestProductMapper';
 import ProductsTestApplication from './ProductsTest/ProductsTestApplication';
+// Confirm is not in the SDK package yet.
+// import ApproveActionConfirm from './PulseDemo/ApproveActionConfirm';
 import WebhookTestApplication from './WebhookTest/WebhookTestApplication';
 
+let prepared = false;
+
 function prepare(): void {
+    if (prepared) {
+        return;
+    }
+    prepared = true;
+
     // Load core services by:
     initiateContainer();
 
     container.setNode(new AddTimestampNode());
+    // container.setNode(new ApproveActionConfirm());
 
     // Products Test — simulated product catalog. Backs the "regular connector"
     // (get product) and "batch with pagination" (list products) demos.
@@ -40,6 +53,14 @@ function prepare(): void {
     container.setApplication(formsDemoApp);
     container.setNode(new MessageBuilder(), formsDemoApp);
     container.setNode(new MessageFormatter(), formsDemoApp);
+
+    // Activepieces SendGrid — SecretText API key, one connector per action
+    // (sendgrid-send-email, …). The piece is an in-process client; Orchesty
+    // owns retry and ApplicationInstall. See @orchesty/activepieces-adapter.
+    registerPiece(container, sendgrid, { name: 'sendgrid', publicName: 'SendGrid' });
+
+    // Create order (Pulse): ARES customer, Drive folder, Google Doc draft.
+    registerCreateOrder(container);
 
     // // System event services - imported from @orchesty/connector-common
     // const eventStatusFilterSuccess = new EventStatusFilter(EventEnum.PROCESS_SUCCESS);
@@ -79,8 +100,11 @@ function prepare(): void {
 
 // Start App by:
 prepare();
-listen().catch((e: unknown) => {
-    const err = e instanceof Error ? e : new Error(typeof e === 'string' ? e : JSON.stringify(e));
-    process.stderr.write(`${err.message}\n${err.stack ?? ''}\n`);
-    process.exit(1);
-});
+
+if (require.main === module) {
+    listen().catch((e: unknown) => {
+        const err = e instanceof Error ? e : new Error(typeof e === 'string' ? e : JSON.stringify(e));
+        process.stderr.write(`${err.message}\n${err.stack ?? ''}\n`);
+        process.exit(1);
+    });
+}

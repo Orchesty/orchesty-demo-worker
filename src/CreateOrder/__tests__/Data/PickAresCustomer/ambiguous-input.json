@@ -1,0 +1,16 @@
+{
+    "data": {
+        "client": "Acme",
+        "subject": "vstupní analýza",
+        "hourlyRate": 1500,
+        "effortMd": 3,
+        "description": "Inventura toků.",
+        "ares": {
+            "ekonomickeSubjekty": [
+                { "ico": "11111111", "obchodniJmeno": "Acme Group s.r.o." },
+                { "ico": "22222222", "obchodniJmeno": "Acme Holding a.s." }
+            ]
+        }
+    },
+    "headers": { "user": "user", "sdk": "sdk" }
+}

@@ -1,0 +1,11 @@
+{
+    "data": {
+        "status": "draft",
+        "documentUrl": "https://docs.google.com/document/d/doc-1/edit",
+        "documentName": "Objednávka – Acme s.r.o. – vstupní analýza – 2026-10-21",
+        "clientName": "Acme s.r.o.",
+        "ico": "12345678",
+        "unfilled": ["{{EMAIL_ZAKAZNIKA}}", "{{TERMIN_DODANI}}"]
+    },
+    "headers": { "user": "user", "sdk": "sdk" }
+}

@@ -14,6 +14,10 @@
   "keywords": [],
   "author": "info@hanaboso.com",
   "dependencies": {
+    "@activepieces/piece-sendgrid": "^0.5.7",
+    "@orchesty/activepieces-adapter": "file:../orchesty-activepieces-adapter",
+    "@orchesty/connector-google-common": "^2.0.2",
+    "@orchesty/connector-open-ai": "^2.0.2",
     "@orchesty/nodejs-sdk": "^5.0.10"
   },
   "devDependencies": {

@@ -1,0 +1,11 @@
+{
+    "data": {
+        "client": "Acme s.r.o.",
+        "subject": "vstupní analýza",
+        "hourlyRate": 1500,
+        "effortMd": 3,
+        "description": "Inventura toků.",
+        "ares": { "ekonomickeSubjekty": [] }
+    },
+    "headers": { "user": "user", "sdk": "sdk" }
+}

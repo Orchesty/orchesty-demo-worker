@@ -1,0 +1,19 @@
+{
+    "data": {
+        "client": "Orchesty Solutions s.r.o.",
+        "subject": "vstupní analýza",
+        "hourlyRate": 1500,
+        "effortMd": 3,
+        "description": "Inventura toků.",
+        "customer": {
+            "source": "ares",
+            "name": "Orchesty Solutions s.r.o.",
+            "ico": "02063450",
+            "address": "Chládkova 898/2, Brno"
+        },
+        "folders": [
+            { "id": "folder-orchesty", "name": "Orchesty" }
+        ]
+    },
+    "headers": { "user": "user", "sdk": "sdk" }
+}

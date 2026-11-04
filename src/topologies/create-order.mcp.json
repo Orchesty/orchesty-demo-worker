@@ -1,0 +1,71 @@
+{
+    "description": "Připraví koncept objednávky ve složce klienta na Google Drive a vrátí odkaz na dokument. Zákazníka dohledá v ARES, do šablony doplní jen známé údaje a zbytek nechá k ruční kontrole. Dokument se nikam neodesílá.",
+    "exposed": true,
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "client": {
+                "type": "string",
+                "description": "Obchodní jméno nebo IČO zákazníka."
+            },
+            "subject": {
+                "type": "string",
+                "description": "Předmět objednávky, například vstupní analýza."
+            },
+            "hourlyRate": {
+                "type": "number",
+                "description": "Hodinová sazba bez DPH."
+            },
+            "effortMd": {
+                "type": "number",
+                "description": "Odhad pracnosti v člověkodnech (MD)."
+            },
+            "description": {
+                "type": "string",
+                "description": "Detailní popis předmětu plnění."
+            },
+            "currency": {
+                "type": "string",
+                "description": "Měna sazby. Výchozí CZK.",
+                "default": "CZK"
+            },
+            "email": {
+                "type": "string",
+                "description": "E-mail zákazníka, pokud ho uživatel uvedl. ARES ho nevrací."
+            }
+        },
+        "required": ["client", "subject", "hourlyRate", "effortMd", "description"]
+    },
+    "output_schema": {
+        "type": "object",
+        "properties": {
+            "documentUrl": {
+                "type": "string",
+                "description": "Odkaz na nový koncept objednávky. Ukaž ho uživateli."
+            },
+            "documentName": {
+                "type": "string",
+                "description": "Název souboru na Google Drive."
+            },
+            "unfilled": {
+                "type": "array",
+                "description": "Placeholdery, které v dokumentu zůstaly k doplnění.",
+                "items": { "type": "string" }
+            }
+        },
+        "required": ["documentUrl"]
+    },
+    "examples": [
+        {
+            "when": "Vytvoř objednávku pro klienta Acme s.r.o. na vstupní analýzu s cenou 1500 Kč za hod a odhadem pracnosti 3 MD. Detailní popis je inventura integračních toků.",
+            "args": {
+                "client": "Acme s.r.o.",
+                "subject": "vstupní analýza",
+                "hourlyRate": 1500,
+                "currency": "CZK",
+                "effortMd": 3,
+                "description": "inventura integračních toků"
+            }
+        }
+    ]
+}
