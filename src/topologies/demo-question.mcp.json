@@ -1,0 +1,25 @@
+{
+    "description": "Test topology for the Question node. Asks for the user's name when it is missing, then adds a timestamp and responds.",
+    "exposed": true,
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string",
+                "description": "Name of the user. When omitted, the run pauses and asks for it."
+            }
+        }
+    },
+    "examples": [
+        {
+            "when": "Run the question test.",
+            "args": {}
+        },
+        {
+            "when": "Run the question test for Jan.",
+            "args": {
+                "name": "Jan"
+            }
+        }
+    ]
+}

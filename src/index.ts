@@ -11,8 +11,9 @@ import ProductsTestListProductsBatch from './ProductsTest/Connector/ProductsTest
 import ProductsTestExtractId from './ProductsTest/CustomNode/ProductsTestExtractId';
 import ProductsTestProductMapper from './ProductsTest/CustomNode/ProductsTestProductMapper';
 import ProductsTestApplication from './ProductsTest/ProductsTestApplication';
-// Confirm is not in the SDK package yet.
+// Confirm and Question are not in the SDK package yet.
 // import ApproveActionConfirm from './PulseDemo/ApproveActionConfirm';
+// import AskNameQuestion from './PulseDemo/AskNameQuestion';
 import WebhookTestApplication from './WebhookTest/WebhookTestApplication';
 
 let prepared = false;
@@ -28,6 +29,7 @@ function prepare(): void {
 
     container.setNode(new AddTimestampNode());
     // container.setNode(new ApproveActionConfirm());
+    // container.setNode(new AskNameQuestion());
 
     // Products Test — simulated product catalog. Backs the "regular connector"
     // (get product) and "batch with pagination" (list products) demos.

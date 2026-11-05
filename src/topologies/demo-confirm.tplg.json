@@ -1,0 +1,70 @@
+{
+    "nodes": [
+        {
+            "type": "flow",
+            "id": "start-demo-confirm",
+            "label": "Event",
+            "shape": "circle",
+            "property": null,
+            "action": null,
+            "name": "start",
+            "position": { "x": -200, "y": 0 }
+        },
+        {
+            "type": "flow",
+            "id": "approve-action",
+            "label": "Confirm",
+            "shape": "square",
+            "property": null,
+            "action": {
+                "name": "pulse-demo-approve-action",
+                "worker": "demo",
+                "type": "confirm",
+                "app": null
+            },
+            "name": null,
+            "position": { "x": 0, "y": 0 }
+        },
+        {
+            "type": "flow",
+            "id": "add-timestamp",
+            "label": "Custom Action",
+            "shape": "square",
+            "property": null,
+            "action": {
+                "name": "add-timestamp",
+                "worker": "demo",
+                "type": "custom",
+                "app": null
+            },
+            "name": null,
+            "position": { "x": 220, "y": -120 }
+        },
+        {
+            "type": "flow",
+            "id": "response-yes",
+            "label": "Response",
+            "shape": "terminal",
+            "property": null,
+            "action": null,
+            "name": null,
+            "position": { "x": 440, "y": -120 }
+        },
+        {
+            "type": "flow",
+            "id": "response-no",
+            "label": "Response",
+            "shape": "terminal",
+            "property": null,
+            "action": null,
+            "name": null,
+            "position": { "x": 220, "y": 120 }
+        }
+    ],
+    "connections": [
+        { "id": "c1", "from": "start-demo-confirm", "to": "approve-action", "sourceOutput": "output", "targetInput": "input" },
+        { "id": "c2", "from": "approve-action", "to": "add-timestamp", "sourceOutput": "yes", "targetInput": "input" },
+        { "id": "c3", "from": "add-timestamp", "to": "response-yes", "sourceOutput": "output", "targetInput": "input" },
+        { "id": "c4", "from": "approve-action", "to": "response-no", "sourceOutput": "no", "targetInput": "input" }
+    ]
+}

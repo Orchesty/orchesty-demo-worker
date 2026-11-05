@@ -1,0 +1,27 @@
+{
+    "description": "Test topology for the Confirm node. Asks for approval and then finishes the yes or no branch.",
+    "exposed": true,
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string",
+                "description": "Name shown in the approval question."
+            },
+            "id": {
+                "type": "string",
+                "description": "Identifier shown in the approval question."
+            }
+        },
+        "required": ["name"]
+    },
+    "examples": [
+        {
+            "when": "Run the confirm test for order 123.",
+            "args": {
+                "name": "Order",
+                "id": "123"
+            }
+        }
+    ]
+}
